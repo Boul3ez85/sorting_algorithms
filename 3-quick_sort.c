@@ -5,7 +5,7 @@
  *@a: integer
  *@b: integer
  *
- *Returns: Nothing
+ *Return: Nothing
  */
 
 void swap(int *a, int *b)
@@ -24,7 +24,7 @@ void swap(int *a, int *b)
  *@low: the low index of the sort range
  *@high: the high index of the sort range
  *
- * Returns: index i
+ *Return: index
  */
 
 int algo_partition(int *array, size_t size, int low, int high)
@@ -55,7 +55,7 @@ int algo_partition(int *array, size_t size, int low, int high)
  *@low: the lowest index
  *@high: the high index/pivot
  *
- *Returns: Nothing
+ *Return: Nothing
  */
 
 void algo_quick_sort(int *array, size_t size, int low, int high)
@@ -75,7 +75,7 @@ void algo_quick_sort(int *array, size_t size, int low, int high)
  *@array: integer array to sort
  *@size: size of the array
  *
- *Returns: Nothing
+ *Return: Nothing
  */
 
 void quick_sort(int *array, size_t size)
