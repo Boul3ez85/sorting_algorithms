@@ -1,5 +1,13 @@
 #include "sort.h"
 
+/**
+ * swap - function swaping the value of 2 integers
+ *@a: integer
+ *@b: integer
+ *
+ *Returns: Nothing
+ */
+
 void swap(int *a, int *b)
 {
 	int tmp;
@@ -8,6 +16,16 @@ void swap(int *a, int *b)
 	*a = *b;
 	*b = tmp;
 }
+
+/**
+ * algo_partition - function to partition the array
+ *@array: integer array to sort
+ *@size: size of the array
+ *@low: the lowest index
+ *@high: the high index/pivot
+ *
+ *Returns: index
+ */
 
 int algo_partition(int *array, size_t size, int low, int high)
 {
@@ -30,6 +48,16 @@ int algo_partition(int *array, size_t size, int low, int high)
 	return (i);
 }
 
+/**
+ *algo_quick_sort - sorting arrays partitions
+ *@array: integer array to sort
+ *@size: size of the array
+ *@low: the lowest index
+ *@high: the high index/pivot
+ *
+ *Returns: Nothing
+ */
+
 void algo_quick_sort(int *array, size_t size, int low, int high)
 {
 	int p;
@@ -42,6 +70,14 @@ void algo_quick_sort(int *array, size_t size, int low, int high)
 	}
 }
 
+/**
+ *quick_sort - function to call algo_quick_sort
+ *@array: integer array to sort
+ *@size: size of the array
+ *
+ *Returns: Nothing
+ */
+ 
 void quick_sort(int *array, size_t size)
 {
 
