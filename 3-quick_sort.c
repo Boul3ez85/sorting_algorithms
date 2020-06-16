@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * swap - function swaping the value of 2 integers
+ *swap - function swaping the value of 2 integers
  *@a: integer
  *@b: integer
  *
@@ -18,13 +18,13 @@ void swap(int *a, int *b)
 }
 
 /**
- * algo_partition - function to partition the array
- *@array: integer array to sort
- *@size: size of the array
- *@low: the lowest index
- *@high: the high index/pivot
+ *algo_partition - partitions the array
+ *@array: the integer array to sort
+ *@size: the size of the array
+ *@low: the low index of the sort range
+ *@high: the high index of the sort range
  *
- *Returns: index
+ * Returns: index i
  */
 
 int algo_partition(int *array, size_t size, int low, int high)
@@ -77,7 +77,7 @@ void algo_quick_sort(int *array, size_t size, int low, int high)
  *
  *Returns: Nothing
  */
- 
+
 void quick_sort(int *array, size_t size)
 {
 
