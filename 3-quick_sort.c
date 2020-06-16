@@ -9,30 +9,30 @@ void swap(int *a, int *b)
 	*b = tmp;
 }
 
-int algo_partition(int *array, size_t size, size_t low, size_t high)
+int algo_partition(int *array, size_t size, int low, int high)
 {
 	int pivot;
-	size_t j, i;
+	int j, i;
 
 	pivot = array[high];
-	for (i = j = low; j < high; j++)
+	i = low - 1;
+	for (j = low; j <= high; j++)
 	{
-		if (array[i] < pivot)
+		if (array[j] <= pivot)
 		{
-			swap(&array[j], &array[i++]);
-			print_array(array, size);
 			i++;
+			swap(&array[i], &array[j]);
+
+			if (i != j)
+				print_array(array, size);
 		}
-	}	
-	swap(&array[i], &pivot);
-	print_array(array, size);
-	
+	}
 	return (i);
 }
 
-void algo_quick_sort(int *array, size_t size, size_t low, size_t high)
+void algo_quick_sort(int *array, size_t size, int low, int high)
 {
-	size_t p;
+	int p;
 
 	if (low < high)
 	{
