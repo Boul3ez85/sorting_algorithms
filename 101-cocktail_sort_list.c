@@ -36,24 +36,21 @@ void swap(listint_t **list, listint_t *node1, listint_t *node2)
  * Return: Nothing
  */
 
-void insertion_sort_list(listint_t **list)
+void cocktail_sort_list(listint_t **list)
 {
         listint_t *node;
 
-        if (!list || !*list || !(*list)->next)
+        if (!*list || !list || !(*list)->next)
                 return;
 
-        node = (*list)->next;
-        while (node)
+        
+        while (node->next)
         {
-                while (node->prev && node->n < node->prev->n)
+                if (node->n > node->next->n)
                 {
-                        swap(list, node->prev, node);
+                        swap(list, node->next, node);
                         print_list(*list);
+                        
                 }
-                node = node->next;
         }
 }
-
-
-
