@@ -46,7 +46,7 @@ void shell_sort(int *array, size_t size)
 		gap = (gap - 1) / 3;
 		print_array(array, size);
 	}
-	for (i = 0; i < (int)size; i++)
+	for (i = 0; i < (int)size - 1; i++)
 	{
 		if (array[i] > array[i + 1])
 		{
